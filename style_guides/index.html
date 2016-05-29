@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Напиши свой style guide</h1>
+		<p>Маргарита Курдюмова, EPAM Systems</p>
+	</header>
+	<section class="slide white">
+		<h2 class="shout">Напиши свой<br>style guide</h2>
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+	</section>
+	<section class="slide">
+		<h2>Зачем проекту style guide</h2>
+		<ol>
+			<li>Проект пишется на протяжении трех лет</li>
+			<li class="next">Несколько поколений разработчиков из 3 городов</li>
+			<li class="next">Каждый пишет код по своим правилам</li>
+			<li class="next">Проблемы с шарингом знаний внутри команды</li>
+			<li class="next">Большое количество UI-багов</li>
+			<li class="next">Фронтовый код иногда пишут backend-разработчики</li>
+		</ol>
+	</section>
+	<section class="slide white">
+		<img src="pictures/css_is_awesome.gif" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Проблемы с HTML</h2>
+		<ol>
+			<li>Неоптимальная разметка, избыточность</li>
+			<li class="next">Не семантическая верстка</li>
+			<li class="next">Проблемы с доступностью с клавиатуры</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Проблемы с CSS</h2>
+		<pre>
+			<code><mark>dd</mark> {</code>
+			<code>	<mark>label</mark> {color: #E4323E;}</code>
+			<code>	<mark>td:first-child</mark>, <mark>td.service-name</mark> {</code>
+			<code>		<mark>&.missed</mark> {</code>
+			<code>        	color:#EB0601;</code>
+			<code>		}</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Проблемы с CSS</h2>
+		<ol>
+			<li>Большая специфичность селекторов (каскады, как результат злоупотребления препроцессорами)</li>
+			<li class="next">Селекторы по элементам</li>
+			<li class="next">Отсутствие переиспользуемых компонентов</li>
+			<li class="next">Нет единых стилей для типографики, цвета и размеры не вынесены в переменные</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Проблемы с JS</h2>
+		<ol>
+			<li>Разное форматирование</li>
+			<li class="next">Не используются best practices</li>
+			<li class="next">Сильно связан с HTML и CSS</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>С чего начать</h2>
+		<ol>
+			<li><a href="https://google.github.io/styleguide/htmlcssguide.xml">Google HTML/CSS Style Guide</a>, <a href="https://google.github.io/styleguide/javascriptguide.xml">Google JavaScript Style Guide</a></li>
+			<li class="next"><a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a></li>
+			<li class="next"><a href="https://github.com/johnpapa/angular-styleguide">Angular Style Guide</a> by John Papa</li>
+			<li class="next"><a href="https://angular.io/docs/ts/latest/guide/style-guide.html">Official Angular 2 style guide</a></li>
+			<li class="next"><a href="http://styleguides.io/">Website Style Guide Resources</a></li>
+		</ol>
+	</section>
+	<section class="slide white">
+		<img src="pictures/style_guide_resourses.PNG" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Из чего состоит style guide</h2>
+		<ol>
+			<li>Форматирование: пробелы, кавычки, запятые</li>
+			<li class="next">Best Practices</li>
+			<li class="next">Соглашение по именованию</li>
+			<li class="next">Структура проекта</li>
+		</ol>
+	</section>
+	<section class="slide white">
+		<img src="pictures/fix-js.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Форматирование</h2>
+		<pre>
+			<code><mark>// bad</mark></code>
+			<code>function foo() {</code>
+			<code><mark class="important">∙∙</mark> const name;</code>
+			<code>}</code>
+			<code><mark>// good</mark></code>
+			<code>function baz() {</code>
+			<code><mark class="important">∙∙∙∙</mark> const name;</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Форматирование</h2>
+		<pre>
+			<code><mark>// bad</mark></code>
+			<code>function test(){</code>
+			<code>	console.log('test');</code>
+			<code>}</code>
+			<code><mark>// good</mark></code>
+			<code>function test()<mark> </mark>{</code>
+			<code>	console.log('test');</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Форматирование</h2>
+		<pre>
+			<code><mark>// bad</mark></code>
+			<code>if(isJedi) {</code>
+			<code>	fight<mark class="important"> </mark>();</code>
+			<code>}</code>
+			<code><mark>// good</mark></code>
+			<code>if<mark> </mark>(isJedi) {</code>
+			<code>	fight();</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Форматирование</h2>
+		<pre>
+			<code><mark>// bad</mark></code>
+			<code>.selector-1, .selector-2 { ...</code>
+			<code> </code>
+			<code><mark>// good</mark></code>
+			<code>.selector-1,</code>
+			<code>.selector-2 {</code>
+			<code>	...</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide white">
+		<img src="pictures/crazy_css.PNG" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>HTML Best Practices</h2>
+		<p>Доступность интерфейса с клавиатуры</p>
+		<ul>
+			<li><a href="http://webaim.org/techniques/keyboard/">WebAIM Keyboard Accessibility</a></li>
+			<li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_ex">WAI-ARIA 1.0 Authoring Practices - Design Patterns</a></li>
+		</ul>
+	</section>
+	<section class="slide white">
+		<img src="pictures/keyboard_accessibility.PNG" alt="" class="cover">
+	</section>
+	<section class="slide white">
+		<img src="pictures/design_patterns.PNG" alt="" class="cover">
+	</section>
+	<section class="slide white">
+		<img src="pictures/accordion.PNG" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>HTML Best Practices</h2>
+		<p>Семантическая разметка</p>
+		<ol>
+			<li>Правильное использование кнопок и ссылок</li>
+			<li class="next">Ссылки tel, mailto</li>
+			<li class="next">Правильная структура заголовков</li>
+			<li class="next">Разметка форм</li>
+			<li class="next">Модальные окна</li>
+			<li class="next"><a href="https://www.w3.org/WAI/tutorials/">Web Accessibility Tutorials</a></li>
+		</ol>
+	</section>
+	<section class="slide white">
+		<img src="pictures/web_a11y_tutorials.PNG" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>CSS Best Practices</h2>
+		<ol>
+			<li>
+				Архитектура CSS, выбрали <mark>BEM</mark>
+				<ul>
+					<li>Решает проблемы со специфичностью</li>
+					<li>Позволяет создавать независимые переиспользуемые компоненты</li>
+					<li>Предоставляет правила именования</li>
+				</ul>
+			</li>
+		</ol>
+	</section>
+	<section class="slide white">
+		<img src="pictures/BEM.PNG" alt="" class="cover">
+	</section>
+	<section class="slide white">
+		<h2><a href="http://csswizardry.com/" style="color: white;">csswizardry.com</a></h2>
+		<img src="pictures/garry_roberts.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/css_guidelines.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/css_guidelines_content.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>CSS Best Practices</h2>
+		<p>Правильное использование переменных в препроцессорах</p>
+		<pre>
+			<code><mark>@neutralDarkBlue:</mark> #3d66a1;</code>
+			<code><mark>@neutralBlue:</mark> #87a8cc;</code>
+			<code><mark>@neutralLightBlue:</mark> #cfe1f4;</code>
+			<code><mark>@neutralExtraLightBlue:</mark> #f0f4f7;</code>
+			<code><mark>@middleBlue:</mark> #3f68a3;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>CSS Best Practices</h2>
+		<p>Размеры в относительных единицах</p>
+	</section>
+	<section class="slide">
+		<h2>JavaScript Best Practices</h2>
+		<p>Объявление всех переменных вверху скоупа</p>
+		<pre>
+			<code><mark>var</mark> firstName,</code>
+			<code>    lastName,</code>
+			<code>    age;</code>
+			<code> </code>
+			<code>firstName = 'John';</code>
+			<code>lastName = 'Papa';</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>JavaScript Best Practices</h2>
+		<p>Обработка исключительных ситуаций</p>
+		<pre>
+			<code>$http.get('/api/customer/' + id)</code>
+			<code>	.then(getCustomerComplete)</code>
+			<code>	.catch(getCustomerFailed);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>JavaScript Best Practices</h2>
+		<p>Не смешивайте JavaScript c HTML и CSS</p>
+		<pre>
+			<code>$container.css({height: 200});</code>
+			<code> </code>
+			<code>$container.addClass('new-class');</code>
+		</pre>
+	</section>
+	<section class="slide white">
+		<img src="pictures/john_papa.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/my-project.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Классы с префиксом 'js-'</h2>
+		<pre>
+			<code><mark>&lt;button</mark> class="send-button <mark>js-send-button</mark>"&gt;Отправить<mark>&lt;button&gt;</mark></code>
+			<code> </code>
+			<code><mark>$('button')</mark>.click(...);</code>
+			<code> </code>
+			<code><mark>$('.send-button')</mark>.click(...);</code>
+			<code> </code>
+			<code><mark>$('.js-send-button')</mark>.click(...);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Линтеры</h2>
+		<ul>
+			<li><a href="https://github.com/stylelint/stylelint">Style Lint</a></li>
+			<li><a href="http://eslint.org/">ESLint</a></li>
+			<li><a href="https://palantir.github.io/tslint/">TSLint</a></li>
+		</ul>
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_possible_errors.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_possible_errors_example.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_best_practices.PNG" alt="" class="cover w">
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_stylistic_issues.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_config_example.PNG" alt="" class="cover">
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_IDE_settings.PNG" alt="" class="cover">
+	</section>
+	<section class="slide white">
+		<img src="pictures/eslint_example.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Форматирование<br> в IDE</h2>
+	</section>
+	<section class="slide white">
+		<img src="pictures/IDE_formatting.PNG" alt="" class="cover">
+	</section>
+	<section class="slide white">
+		<img src="pictures/editorconfig.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/editorconfig_settings.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Living Style Guide</h2>
+	</section>
+	<section class="slide white">
+		<img src="pictures/living.PNG" alt="" class="cover h">
+	</section>
+	<section class="slide white">
+		<img src="pictures/living2.PNG" alt="" class="cover h">
+	</section>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
